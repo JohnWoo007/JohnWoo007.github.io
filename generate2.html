@@ -718,7 +718,7 @@ var path_to_json_file = "getmarkets.txt";
 					var array = [];
 					for (var key in data) {
 					    if (data.hasOwnProperty(key)) {
-						var item = json[key];
+						var item = data[key];
 						array.push({
 						    MarketCurrency: item.MarketCurrency,
 						    BaseCurrency: item.BaseCurrency
