@@ -746,7 +746,19 @@ var path_to_json_file = "getmarkets.txt";
 			}); //get
 
 	
-
+// chosen init
+	
+	var config = {
+	  '.chosen-select'           : {},
+	  '.chosen-select-deselect'  : { allow_single_deselect: true },
+	  '.chosen-select-no-single' : { disable_search_threshold: 10 },
+	  '.chosen-select-no-results': { no_results_text: 'Oops, nothing found!' },
+	  '.chosen-select-rtl'       : { rtl: true },
+	  '.chosen-select-width'     : { width: '95%' }
+	}
+	for (var selector in config) {
+	  $(selector).chosen(config[selector]);
+	}
 
 });
 </script>
@@ -755,7 +767,7 @@ var path_to_json_file = "getmarkets.txt";
 	
   <script src="chosen.jquery.min.js" type="text/javascript"></script>
   <script src="docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
-  <script src="docsupport/init.js" type="text/javascript" charset="utf-8"></script>
+
 	
 </body>
 </html>
