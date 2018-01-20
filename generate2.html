@@ -276,20 +276,8 @@ td.generate:hover {
 					<td>Выберите пару из списка</td>
 					<td>
 						<div>
-						  <select data-placeholder="Your Favorite Football Team" class="chosen-select" tabindex="5">
-							<option value=""></option>
-							<optgroup label="Пары к USDT">
-							  <option>Dallas Cowboys</option>
-							  <option>New York Giants</option>
-							  <option>Philadelphia Eagles</option>
-							  <option>Washington Redskins</option>
-							</optgroup>
-							<optgroup label="Пары к BTC">
-							  <option>Chicago Bears</option>
-							  <option>Detroit Lions</option>
-							  <option>Green Bay Packers</option>
-							  <option>Minnesota Vikings</option>
-							</optgroup>
+						  <select id="optgrp" data-placeholder="Выберите пару из списка" class="chosen-select" tabindex="5">
+
 						  </select>
 						</div>
 					</td>
@@ -743,7 +731,9 @@ var path_to_json_file = "getmarkets.txt";
 
 					output_usdt = '<optgroup label="Пары к USDT">' + output_usdt + '</optgroup>';
 
-					console.log(output_usdt);					
+					console.log(output_usdt);
+					
+					$('#optgrp').html(output_usdt);
 
 					
 				
