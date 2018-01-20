@@ -665,7 +665,21 @@ $("#generate").click(function () {
 
 		$("#graph_img_url").attr("src",graph_url);
 
-	
+	   	var lettercount = $("h1").text().length;
+		if (lettercount == 9)
+		{
+			$("h1").css({ 'letter-spacing' : '-3px' });
+		}
+		if (lettercount == 10)
+		{
+			$("h1").css({ 'letter-spacing' : '-5px' });
+		}		
+		if (lettercount < 9)
+		{
+			$("h1").css({ 'letter-spacing' : '0' });
+		}
+			
+			
 	html2canvas(document.querySelector("#main"), { allowTaint: true, backgroundColor: '#f2f5f8' } ).then(canvas => {
 //		document.body.appendChild(canvas)
 		//$( "body" ).append(canvas);
