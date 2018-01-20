@@ -713,7 +713,23 @@ var path_to_json_file = "getmarkets.txt";
 				path_to_json_file,
 				function(data){
 					//alert(data);
-					$( "body" ).append(data);					
+					//$( "body" ).append(data);					
+					
+					var array = [];
+					for (var key in data) {
+					    if (data.hasOwnProperty(key)) {
+						var item = json[key];
+						array.push({
+						    MarketCurrency: item.MarketCurrency,
+						    BaseCurrency: item.BaseCurrency
+						});            
+					    }
+					}					
+
+					
+					alert(array);
+					
+					
 					}
 				);
 
