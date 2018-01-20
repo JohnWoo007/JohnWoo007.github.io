@@ -712,7 +712,8 @@ var path_to_json_file = "getmarkets.txt";
 			$.get(
 				path_to_json_file,
 				function(data){
-					alert(data);
+					//alert(data);
+					$( "body" ).append(data);					
 					}
 				);
 
