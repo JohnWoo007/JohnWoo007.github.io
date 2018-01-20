@@ -706,12 +706,12 @@ $(".clear").click(function() {
 $(document).ready(function() {
 
 
-
+var json_obj;
 var path_to_json_file = "getmarkets.txt";
 			$.get(
 				path_to_json_file,
 				function(data){
-					var json_obj = $.parseJSON(data);
+					json_obj = $.parseJSON(data);
 					}
 				);
 
