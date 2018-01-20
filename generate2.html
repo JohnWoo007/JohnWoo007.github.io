@@ -708,13 +708,49 @@ $(document).ready(function() {
 
 
 var path_to_json_file = "getmarkets.txt";
-
 			$.get(
 				path_to_json_file,
 				function(data){
-					alert(data);
+					var json_obj = $.parseJSON(data);
 					}
 				);
+
+	
+	
+
+				var output_btc='';
+				var output_eth='';
+				var output_usdt='';
+
+			 for (var i in json_obj.result) 
+            {
+				if (json_obj.result[i].BaseCurrency = 'BTC')
+				{
+					output_btc+='<option>' + json_obj.result[i].MarketCurrency + '/BTC</option>';
+				}
+
+				if (json_obj.result[i].BaseCurrency = 'ETH')
+				{
+					output_eth+='<option>' + json_obj.result[i].MarketCurrency + '/ETH</option>';
+				}			
+
+				if (json_obj.result[i].BaseCurrency = 'USDT')
+				{
+					output_usdt+='<option>' + json_obj.result[i].MarketCurrency + '/USDT</option>';
+				}					
+
+			}
+
+			output_btc = '<optgroup label="Пары к BTC">' + output_btc + '</optgroup>';
+
+			output_eth = '<optgroup label="Пары к ETH">' + output_eth + '</optgroup>';
+
+			output_usdt = '<optgroup label="Пары к USDT">' + output_usdt + '</optgroup>';
+
+			console.log(output_usdt);
+	
+
+
 });
 </script>
 
