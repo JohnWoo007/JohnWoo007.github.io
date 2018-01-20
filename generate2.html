@@ -707,16 +707,17 @@ $(document).ready(function() {
 
 
 var json_obj;
+var mydata;
 var path_to_json_file = "getmarkets.txt";
 			$.get(
 				path_to_json_file,
 				function(data){
-					alert(data);
+					mydata = data;
 					}
 				);
 
 	
-	
+alert(mydata);
 	
 
 
