@@ -731,9 +731,11 @@ var path_to_json_file = "getmarkets.txt";
 
 					output_usdt = '<optgroup label="Пары к USDT">' + output_usdt + '</optgroup>';
 
-					console.log(output_usdt);
+					var output_all_markets = output_usdt + output_btc + output_eth;
 					
-					$('#optgrp').html(output_usdt);
+					// console.log(output_usdt);
+					
+					$('#optgrp').html(output_all_markets);
 
 					
 				
