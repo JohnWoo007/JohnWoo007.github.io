@@ -701,17 +701,17 @@ var path_to_json_file = "getmarkets.txt";
 					{
 						if (json_obj.result[i].BaseCurrency = 'BTC')
 						{
-							output_btc+='<option>' + json_obj.result[i].MarketCurrency + '/BTC</option>';
+							output_btc+='<option>' + json_obj.result[i].MarketName + '</option>';
 						}
 
 						if (json_obj.result[i].BaseCurrency = 'ETH')
 						{
-							output_eth+='<option>' + json_obj.result[i].MarketCurrency + '/ETH</option>';
+							output_eth+='<option>' + json_obj.result[i].MarketName + '</option>';
 						}			
 
 						if (json_obj.result[i].BaseCurrency = 'USDT')
 						{
-							output_usdt+='<option>' + json_obj.result[i].MarketCurrency + '/USDT</option>';
+							output_usdt+='<option>' + json_obj.result[i].MarketName + '</option>';
 						}					
 
 					}
