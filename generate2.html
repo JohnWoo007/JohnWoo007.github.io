@@ -699,17 +699,17 @@ var path_to_json_file = "getmarkets.txt";
 					
 					 for (var i in json_obj.result) 
 					{
-						if (json_obj.result[i].BaseCurrency = 'BTC')
+						if (json_obj.result[i].BaseCurrency == 'BTC')
 						{
 							output_btc+='<option>' + json_obj.result[i].MarketName + '</option>';
 						}
 
-						if (json_obj.result[i].BaseCurrency = 'ETH')
+						if (json_obj.result[i].BaseCurrency == 'ETH')
 						{
 							output_eth+='<option>' + json_obj.result[i].MarketName + '</option>';
 						}			
 
-						if (json_obj.result[i].BaseCurrency = 'USDT')
+						if (json_obj.result[i].BaseCurrency == 'USDT')
 						{
 							output_usdt+='<option>' + json_obj.result[i].MarketName + '</option>';
 						}					
